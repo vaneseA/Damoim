@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imgVwLogo"
+            android:layout_width="240dp"
+            android:layout_height="120dp"
+            android:layout_alignBottom="@id/imgVwCampaign"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"
+            android:padding="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo_damoim" />
+
+        <ImageView
+            android:id="@+id/imgVwCampaign"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:padding="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/campaign" />
+
+    </RelativeLayout>

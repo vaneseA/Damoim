@@ -3,8 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_baseline_exit_24.xml" value="0.2065" />
+        <entry key="app/src/main/res/drawable/ic_bottom_tab1_meet.xml" value="0.2065" />
+        <entry key="app/src/main/res/drawable/ic_bottom_tab2_charge.xml" value="0.2065" />
+        <entry key="app/src/main/res/drawable/ic_bottom_tab3_my_page.xml" value="0.2065" />
+        <entry key="app/src/main/res/drawable/ic_bottom_tab4_location.xml" value="0.2065" />
+        <entry key="app/src/main/res/drawable/ic_navigation_interest_check.xml" value="0.2065" />
+        <entry key="app/src/main/res/drawable/ic_navigation_mk_charge.xml" value="0.2065" />
+        <entry key="app/src/main/res/drawable/ic_navigation_pin.xml" value="0.2065" />
+        <entry key="app/src/main/res/drawable/ic_navigation_premium.xml" value="0.2065" />
+        <entry key="app/src/main/res/drawable/ic_navigation_recent.xml" value="0.2065" />
+        <entry key="app/src/main/res/drawable/ic_navigation_setting.xml" value="0.2065" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/nav_header.xml" value="0.8857421875" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/nav_header.xml" value="0.125" />
+        <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/menu/nav_menu.xml" value="0.4036458333333333" />
       </map>
     </option>
