@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:id="@+id/navigation_menu_tab1">
+        <item
+            android:id="@+id/navigation_menu_interest"
+            android:icon="@drawable/ic_navigation_interest_check"
+            android:title="관심사 선택" />
+    </group>
+
+    <group android:id="@+id/navigation_menu_tab2">
+        <item
+            android:id="@+id/navigation_menu_favorite_meet"
+            android:icon="@drawable/ic_navigation_pin"
+            android:title="내 관심 모임" />
+
+        <item
+            android:id="@+id/navigation_menu_recent_meet"
+            android:icon="@drawable/ic_navigation_recent"
+            android:title="최근 본 보임" />
+        <item
+            android:id="@+id/navigation_menu__premium_meet"
+            android:icon="@drawable/ic_navigation_premium"
+            android:title="프리미엄 모임" />
+        <item
+            android:id="@+id/navigation_menu_mk_charge_class"
+            android:icon="@drawable/ic_navigation_mk_charge"
+            android:title="유료 클래스 만들기" />
+
+    </group>
+
+    <group android:id="@+id/navigation_menu_tab3">
+
+        <item
+            android:id="@+id/navigation_menu_setting"
+            android:icon="@drawable/ic_navigation_setting"
+            android:title="설정" />
+
+    </group>
+    <group android:id="@+id/navigation_menu_tab4">
+
+        <item
+            android:id="@+id/navigation_menu_logout"
+            android:icon="@drawable/ic_baseline_exit_24"
+            android:title="로그아웃" />
+
+    </group>
+</menu>
