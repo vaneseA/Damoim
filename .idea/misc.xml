@@ -14,10 +14,13 @@
         <entry key="app/src/main/res/drawable/ic_navigation_premium.xml" value="0.2065" />
         <entry key="app/src/main/res/drawable/ic_navigation_recent.xml" value="0.2065" />
         <entry key="app/src/main/res/drawable/ic_navigation_setting.xml" value="0.2065" />
+        <entry key="app/src/main/res/drawable/ic_option_search.xml" value="0.1535" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/my_custom_action_bar.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/nav_header.xml" value="0.125" />
         <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/menu/menu_option_main.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/menu/nav_menu.xml" value="0.4036458333333333" />
       </map>
     </option>
