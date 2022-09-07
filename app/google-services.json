@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "105726624012",
+    "project_id": "damoim-2e473",
+    "storage_bucket": "damoim-2e473.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105726624012:android:99c4a2cc24a707216d0929",
+        "android_client_info": {
+          "package_name": "com.example.damoim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105726624012-8ikgsnnptor3ubjet1rkg7lvcvgn7ofu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj-WvI5kMFrcnhoyIl3jbuVr9bjIfeCFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105726624012-8ikgsnnptor3ubjet1rkg7lvcvgn7ofu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
