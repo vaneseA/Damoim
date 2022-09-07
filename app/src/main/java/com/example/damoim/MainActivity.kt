@@ -9,11 +9,16 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.viewpager2.widget.ViewPager2
+import com.example.damoim.adapters.BottomViewPagerAdapter
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.my_custom_action_bar.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var toggle: ActionBarDrawerToggle
+    lateinit var mBottomAdapter: BottomViewPagerAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -66,7 +71,38 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+
+
+        mBottomAdapter = BottomViewPagerAdapter(this)
+        bottomViewPager.adapter = mBottomAdapter
+
+        bottomViewPager.registerOnPageChangeCallback(
+            object : ViewPager2.OnPageChangeCallback() {
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+                    bottomNav.menu.getItem(position).isChecked = true
+                    titleTxt.text = when (position) {
+                        0 -> "모임찾기"
+                        1 -> "유료클래스"
+                        2 -> "내모임"
+                        else -> "주변검색"
+                    }
+                }
+            })
+
+        bottomNav.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.bnv_tab1 -> bottomViewPager.currentItem = 0
+                R.id.bnv_tab2 -> bottomViewPager.currentItem = 1
+                R.id.bnv_tab3 -> bottomViewPager.currentItem = 2
+                R.id.bnv_tab4 -> bottomViewPager.currentItem = 3
+            }
+            return@setOnItemSelectedListener true
+        }
+
     }
+
+
 
     fun setCustomActionBar () {
         val defActionBar = supportActionBar!!
@@ -91,4 +127,5 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu_option_main, menu)
         return super.onCreateOptionsMenu(menu)
     }
+
 }
