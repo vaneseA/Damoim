@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="CreateActivity"
+            type="com.example.damoim.CreateActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.activity.CreateActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ToolbarTheme_Red">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jalnanche"
+                android:text="모임 개설"
+                android:textColor="@color/red"
+                android:textSize="16sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_bottom_tab4_location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ems="4"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:fontFamily="@font/jalnanche"
+                android:text="지역" />
+
+            <EditText
+                android:id="@+id/LocationTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/bg_edit_text_create_activity"
+                android:padding="8dp"
+                android:hint="동,읍,면 입력"
+                android:fontFamily="@font/jalnanche"
+                android:textColor="#ff999999"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:id="@+id/imgVwInterest"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_bottom_tab1_meet" />
+
+            <EditText
+                android:id="@+id/groupNameEdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/bg_edit_text_create_activity"
+                android:hint="모임이름"
+                android:fontFamily="@font/jalnanche"
+                android:inputType="text"
+                android:padding="8dp"
+                android:privateImeOptions="defaultInputmode=korean" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/purposeEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bg_edit_text_create_activity"
+            android:gravity="top"
+            android:hint="모임 목적"
+            android:fontFamily="@font/jalnanche"
+            android:inputType="textMultiLine"
+            android:lines="7"
+            android:maxLength="40"
+            android:padding="8dp"
+            android:privateImeOptions="defaultInputmode=korean" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/jalnanche"
+            android:text="대표 이미지 설정" />
+
+        <ImageView
+            android:id="@+id/moimImg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:src="@drawable/bg_image_search" />
+
+        <Button
+            android:id="@+id/createMoimBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textColor="@color/white"
+            android:background="@color/red"
+            android:fontFamily="@font/jalnanche"
+            android:text="모임 만들기" />
+
+
+    </LinearLayout>
+</layout>

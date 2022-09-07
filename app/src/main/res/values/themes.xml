@@ -17,4 +17,10 @@
         <item name="android:textSize">18sp</item>
         <item name="fontFamily">@font/jalnanche</item>
     </style>
+
+
+    <style name="ToolbarTheme_Red">
+        <item name="colorControlNormal">@color/red</item>
+    </style>
+
 </resources>
