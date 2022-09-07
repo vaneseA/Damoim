@@ -4,11 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import com.example.damoim.R
+import com.example.damoim.fragments.BaseFragment
 
 
-class AllFragment : Fragment() {
+class AllFragment : BaseFragment() {
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -16,5 +17,10 @@ class AllFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_all, container,false)
+    }
+    override fun setupEvents() {
+    }
+
+    override fun setValues() {
     }
 }
