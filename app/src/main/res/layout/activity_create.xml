@@ -52,7 +52,7 @@
                 android:text="지역" />
 
             <EditText
-                android:id="@+id/LocationTxt"
+                android:id="@+id/locationEdt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
