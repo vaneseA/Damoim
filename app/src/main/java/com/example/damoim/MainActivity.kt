@@ -1,5 +1,6 @@
 package com.example.damoim
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -12,6 +13,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.viewpager2.widget.ViewPager2
 import com.example.damoim.adapters.BottomViewPagerAdapter
 import com.google.android.material.navigation.NavigationView
+import com.gun0912.tedpermission.provider.TedPermissionProvider.context
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.my_custom_action_bar.*
 
@@ -38,9 +40,9 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.navigation_menu_interest -> Toast.makeText(
+                R.id.navigation_menu_interest ->  Toast.makeText(
                     applicationContext,
-                    "Clicked navigation_menu_interest",
+                    "Clicked navigation_menu_favorite_meet",
                     Toast.LENGTH_SHORT
                 ).show()
                 R.id.navigation_menu_favorite_meet -> Toast.makeText(

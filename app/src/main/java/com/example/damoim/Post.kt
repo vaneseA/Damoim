@@ -5,10 +5,7 @@ class Post {
      * 글의 ID
      */
     var postId = ""
-    /**
-     * 글 작성자의 ID
-     */
-    var writerId = ""
+
 //모임 지역
     var location = ""
     // 모임이름
@@ -22,8 +19,4 @@ class Post {
      */
     var writeTime: Any = Any()
 
-    /**
-     * 댓글의 개수
-     */
-    var commentCount = 0
 }

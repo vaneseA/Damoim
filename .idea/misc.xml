@@ -21,13 +21,15 @@
         <entry key="app/src/main/res/layout/activity_create.xml" value="0.15668202764976957" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_test.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/layout/fragment_all.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/fragment_book.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/fragment_bottom_meet.xml" value="0.21822916666666667" />
-        <entry key="app/src/main/res/layout/fragment_bottom_tab1_meet.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/fragment_bottom_tab1_meet.xml" value="0.20425531914893616" />
         <entry key="app/src/main/res/layout/fragment_bottom_tab2_charge.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/fragment_bottom_tab3_my_page.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/fragment_bottom_tab4_location.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/fragment_outdoor.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/layout_recycler_meet_base_item.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/my_custom_action_bar.xml" value="0.165" />
         <entry key="app/src/main/res/layout/nav_header.xml" value="0.125" />
