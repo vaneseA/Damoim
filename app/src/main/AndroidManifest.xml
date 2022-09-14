@@ -4,8 +4,8 @@
     package="com.example.damoim">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-   트
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Damoim"
         tools:targetApi="31">
+        <activity
+            android:name=".TestActivity"
+            android:exported="false" />
         <activity
             android:name=".CreateActivity"
             android:exported="false"

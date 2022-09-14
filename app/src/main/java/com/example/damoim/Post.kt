@@ -14,9 +14,6 @@ class Post {
     var purposeMessage = ""
     //모임 메인이미지
     var moimImgUri = ""
-    /**
-     * 글이 쓰여진 시간
-     */
-    var writeTime: Any = Any()
+
 
 }

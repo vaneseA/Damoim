@@ -4,6 +4,6 @@ package com.example.damoim
 class MoimData {
 
     companion object{
-        var loginUser : Post? = null
+        var Post : Post? = null
     }
 }
