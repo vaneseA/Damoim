@@ -64,6 +64,7 @@ dependencies {
 
     //    TedPermission
     implementation 'io.github.ParkSangGwon:tedpermission-normal:3.3.0'
-
+//    이미지로딩 라이브러리(피카소)
+    api 'com.squareup.picasso:picasso:2.71828'
 }
 apply plugin: 'com.google.gms.google-services'

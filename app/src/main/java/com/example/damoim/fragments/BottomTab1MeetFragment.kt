@@ -2,6 +2,7 @@ package com.example.damoim.fragments
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 
 import android.view.LayoutInflater
@@ -25,6 +26,7 @@ import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_bottom_tab1_meet.*
 import kotlinx.android.synthetic.main.layout_recycler_meet_base_item.view.*
 
@@ -116,8 +118,8 @@ class BottomTab1MeetFragment : BaseFragment() {
                     // snapshot
                     snapshot?.let {
                         // snapshop 의 데이터를 Post 객체로 가져옴
-                        val post = snapshot.getValue(Post::class.java)
-                        post?.let { post ->
+                        val postsssss = snapshot.getValue(Post::class.java)
+                        postsssss?.let { post ->
                             // 기존의 인덱스를 구한다
                             val existIndex = posts.map { it.postId }.indexOf(post.postId)
                             // 기존에 데이터를 지운다.
@@ -141,9 +143,9 @@ class BottomTab1MeetFragment : BaseFragment() {
                 override fun onChildRemoved(snapshot: DataSnapshot) {
                     snapshot?.let {
                         // snapshot 의 데이터를 Post 객체로 가져옴
-                        val post = snapshot.getValue(Post::class.java)
+                        val postsssss = snapshot.getValue(Post::class.java)
                         //
-                        post?.let { post ->
+                        postsssss?.let { post ->
                             // 기존에 저장된 인덱스를 찾아서 해당 인덱스의 데이터를 삭제한다.
                             val existIndex = posts.map { it.postId }.indexOf(post.postId)
                             posts.removeAt(existIndex)
@@ -197,9 +199,9 @@ class BottomTab1MeetFragment : BaseFragment() {
         val tv_purpose_of_meet_meet_basic_recycler_item: TextView =
             itemView.tv_purpose_of_meet_meet_basic_recycler_item
 //
-//        // 모임 이미지
-//        val circle_image_view_meet_basic_recycler_item: ImageView =
-//            itemView.circle_image_view_meet_basic_recycler_item
+        // 모임 이미지
+        val circle_image_view_meet_basic_recycler_item: ImageView =
+            itemView.circle_image_view_meet_basic_recycler_item
     }
 
     // RecyclerView 의 어댑터 클래스
@@ -229,8 +231,8 @@ class BottomTab1MeetFragment : BaseFragment() {
             holder.tv_meet_name_meet_basic_recycler_item.text = post.groupName
             // 모임 목적
             holder.tv_purpose_of_meet_meet_basic_recycler_item.text = post.purposeMessage
-//            // 모임 이미지
-//            holder.circle_image_view_meet_basic_recycler_item.image =post.moimImgUri
+//          // 모임 이미지
+            Picasso.get().load(Uri.parse(post.moimImgUri)).fit().centerCrop().into(holder.circle_image_view_meet_basic_recycler_item)
 
 
             // 배경색깔
