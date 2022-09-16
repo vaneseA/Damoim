@@ -44,6 +44,8 @@
             android:padding="16dp">
 
 
+
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -144,6 +146,12 @@
                 android:fontFamily="@font/jalnanche"
                 android:text="선택 입력 사랑"
                 android:textSize="17dp" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImg"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@mipmap/ic_launcher_round"
+                android:layout_gravity="center"/>
 
             <RadioGroup
                 android:id="@+id/rgAccount"
