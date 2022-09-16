@@ -1,26 +1,19 @@
 package com.example.damoim
 
 class Post(
-    uid: String,
-    toString: String,
-    toString1: String,
-    toString2: String,
-    moimImgUrl: String
-) {
-    /**
-     * 글의 ID
-     */
-    var uid = ""
-
-    var postId = ""
+//
+//     * 글의 ID
+//     */
+    var uid: String = "",
+    var postId: String = "",
 //모임 지역
-    var location = ""
+    var location: String = "",
     // 모임이름
-    var groupName = ""
+    var groupName: String = "",
     //모임 목적
-    var purposeMessage = ""
+    var purposeMessage: String = "",
     //모임 메인이미지
-    var moimImgUri = ""
+    var moimImgUri: String = "",
 
 
-}
+    )
