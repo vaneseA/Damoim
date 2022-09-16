@@ -1,0 +1,180 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.signup.SignUpActivity">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/tbAccount"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/red"
+            android:theme="@style/ToolbarTheme_Red">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jalnanche"
+                android:text="회원가입"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/signUpBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"
+                android:clickable="true"
+                android:fontFamily="@font/jalnanche"
+                android:text="저장"
+                android:textColor="@color/white" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/jalnanche"
+                android:text="필수 입력 사항"
+                android:textSize="17dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/emailEdt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_basic"
+                    android:hint="이메일"
+                    android:inputType="textEmailAddress"
+                    android:padding="8dp" />
+
+                <Button
+                    android:id="@+id/emailDupBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:backgroundTint="@color/red"
+                    android:fontFamily="@font/jalnanche"
+                    android:text="중복 확인"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/passwordEdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_edit_text_basic"
+                android:hint="비밀번호 8자 이상"
+                android:inputType="textPassword"
+                android:padding="8dp" />
+
+
+            <EditText
+                android:id="@+id/pwDupEdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_edit_text_basic"
+                android:hint="비밀번호 재입력"
+                android:inputType="textPassword"
+                android:padding="8dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/nickEdt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text_basic"
+                    android:hint="닉네임 입력"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:padding="8dp" />
+
+                <Button
+                    android:id="@+id/nickDupBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:backgroundTint="@color/red"
+                    android:fontFamily="@font/jalnanche"
+                    android:text="중복 확인"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/jalnanche"
+                android:text="선택 입력 사랑"
+                android:textSize="17dp" />
+
+            <RadioGroup
+                android:id="@+id/rgAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbAccountMale"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/radionbutton_male"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="남자"
+                    android:textColor="@color/selector_text_color_radiobutton" />
+
+                <RadioButton
+                    android:id="@+id/rbAccountFemale"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/radionbutton_female"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="여자"
+                    android:textColor="@color/selector_text_color_radiobutton"
+                    app:backgroundTint="@null" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -40,8 +40,8 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.navigation_menu_interest ->
-                startActivity(Intent(context, TestActivity::class.java))
+//                R.id.navigation_menu_interest ->
+//                startActivity(Intent(context, TestActivity::class.java))
 
                 R.id.navigation_menu_favorite_meet -> Toast.makeText(
                     applicationContext,

@@ -54,9 +54,9 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
 //    파이어베이스
     implementation 'com.google.firebase:firebase-core:15.0.0'
-    implementation 'com.google.firebase:firebase-database:15.0.0'
+
     implementation platform('com.google.firebase:firebase-bom:26.3.0')
-    implementation 'com.google.firebase:firebase-database-ktx'
+    implementation 'com.google.firebase:firebase-database:16.0.1'
     implementation 'com.google.firebase:firebase-storage:16.0.1'
 
     // 이미지 로딩 라이브러리 피카소
