@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 
 import com.google.firebase.database.FirebaseDatabase
@@ -23,10 +24,6 @@ import java.util.*
 
 
 class CreateActivity : AppCompatActivity() {
-    //    // Post 객체 생성
-//    val post = Post()
-//    // Firebase 의 Posts 참조에서 객체를 저장하기 위한 새로운 카를 생성하고 참조를 newRef 에 저장
-//    val newRef = FirebaseDatabase.getInstance().getReference("Posts").push()
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -75,20 +72,21 @@ class CreateActivity : AppCompatActivity() {
     }
 
     private fun saveMoimTofirebaseDatabase(moimImgUrl: String) {
-        val uid = FirebaseAuth.getInstance().uid ?: ""
-        val ref = FirebaseDatabase.getInstance().getReference("/Posts/$uid")
-
+        // Firebase 의 Posts 참조에서 객체를 저장하기 위한 새로운 카를 생성하고 참조를 newRef 에 저장
+        val newRef = FirebaseDatabase.getInstance().getReference("Posts").push()
+        // 글의 ID 는 새로 생성된 파이어베이스 참조의 키로 할당
+        val postId = newRef.key.toString()
         val posts = Post(
-            uid,
-            purposeEdt.text.toString(),
-            groupNameEdt.text.toString(),
+            postId,
             locationEdt.text.toString(),
+            groupNameEdt.text.toString(),
+            purposeEdt.text.toString(),
             moimImgUrl
         )
 
-        ref.setValue(posts)
+        newRef.setValue(posts)
             .addOnSuccessListener {
-                Log.d("CreateActivity", "firebase Database에 저장되었습니다.")
+                Toast.makeText(applicationContext, "모임 등록완료.", Toast.LENGTH_SHORT).show()
             }
     }
 
