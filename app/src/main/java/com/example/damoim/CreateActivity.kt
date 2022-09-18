@@ -23,7 +23,7 @@ import java.util.*
 
 
 class CreateActivity : AppCompatActivity() {
-//    // Post 객체 생성
+    //    // Post 객체 생성
 //    val post = Post()
 //    // Firebase 의 Posts 참조에서 객체를 저장하기 위한 새로운 카를 생성하고 참조를 newRef 에 저장
 //    val newRef = FirebaseDatabase.getInstance().getReference("Posts").push()
@@ -41,24 +41,10 @@ class CreateActivity : AppCompatActivity() {
         moimImg.setOnClickListener {
             selectImage()
         }
-        createMoimBtn.setOnClickListener {uploadImage()
-finish()
-//            //모임지역
-//            post.location = locationEdt.text.toString()
-////          모임이름
-//            post.groupName = groupNameEdt.text.toString()
-//            // 모임메세지 EditText 의 텍스트 내용을 할당
-//            post.purposeMessage = purposeEdt.text.toString()
-//            //모임 이미지 uri주소를 현재 모임 이미지 주소로 할당
-////            post.moimImgUri = moimImg.setImageURI()
-//            // 글쓴 사람의 ID 는 디바이스의 아이디로 할당
-//            post.postId = newRef.key.toString()
-//            uploadImage()
-//            newRef.setValue(post)
-////          파이어베이스 디렉토리로 보냄
-//            // 저장성공 토스트 알림을 보여주고 Activity 종료
-//            Toast.makeText(applicationContext, "저장완료.", Toast.LENGTH_SHORT).show()
-//            finish()
+        createMoimBtn.setOnClickListener {
+            uploadImage()
+            finish()
+
         }
 
     }
@@ -69,7 +55,7 @@ finish()
 
 
     private fun uploadImage() {
-        if(selectedPhotoUri == null) return
+        if (selectedPhotoUri == null) return
 
         val formatter = SimpleDateFormat("yyyy_MM_dd_HH_mm_ss", Locale.getDefault())
         val now = Date()
@@ -88,11 +74,17 @@ finish()
         }
     }
 
-    private fun saveMoimTofirebaseDatabase(moimImgUrl:String) {
+    private fun saveMoimTofirebaseDatabase(moimImgUrl: String) {
         val uid = FirebaseAuth.getInstance().uid ?: ""
         val ref = FirebaseDatabase.getInstance().getReference("/Posts/$uid")
 
-        val  posts = Post(uid, purposeEdt.text.toString(), groupNameEdt.text.toString(), locationEdt.text.toString(),moimImgUrl)
+        val posts = Post(
+            uid,
+            purposeEdt.text.toString(),
+            groupNameEdt.text.toString(),
+            locationEdt.text.toString(),
+            moimImgUrl
+        )
 
         ref.setValue(posts)
             .addOnSuccessListener {
@@ -100,27 +92,27 @@ finish()
             }
     }
 
-        private fun selectImage() {
-            val intent = Intent()
-            intent.type = "image/*"
-            intent.action = Intent.ACTION_PICK
+    private fun selectImage() {
+        val intent = Intent()
+        intent.type = "image/*"
+        intent.action = Intent.ACTION_PICK
 
-            startActivityForResult(intent, 0)
-        }
+        startActivityForResult(intent, 0)
+    }
 
-        var selectedPhotoUri: Uri? = null
+    var selectedPhotoUri: Uri? = null
 
-        override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-            super.onActivityResult(requestCode, resultCode, data)
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
 
-            if (requestCode == 0 && resultCode == Activity.RESULT_OK && data != null) {
+        if (requestCode == 0 && resultCode == Activity.RESULT_OK && data != null) {
 
-                selectedPhotoUri = data.data
+            selectedPhotoUri = data.data
 
-                val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, selectedPhotoUri)
-                val bitmapDrawable = BitmapDrawable(bitmap)
-                moimImg.setBackgroundDrawable(bitmapDrawable)
-            }
+            val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, selectedPhotoUri)
+            val bitmapDrawable = BitmapDrawable(bitmap)
+            moimImg.setBackgroundDrawable(bitmapDrawable)
         }
     }
+}
 
