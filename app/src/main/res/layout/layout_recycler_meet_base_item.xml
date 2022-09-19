@@ -29,7 +29,7 @@
             android:layout_toRightOf="@id/circle_image_view_meet_basic_recycler_item"
             android:layout_alignTop="@id/circle_image_view_meet_basic_recycler_item"
             android:layout_marginLeft="16dp"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@drawable/icon4"/>
 
         <TextView
             android:id="@+id/tv_location_meet_basic_recycler_item"

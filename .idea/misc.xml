@@ -23,6 +23,7 @@
         <entry key="app/src/main/res/layout/activity_create.xml" value="0.15668202764976957" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_moimdetail.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.20416666666666666" />
@@ -37,6 +38,7 @@
         <entry key="app/src/main/res/layout/layout_recycler_meet_base_item.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/my_custom_action_bar.xml" value="0.165" />
         <entry key="app/src/main/res/layout/nav_header.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/select_icon.xml" value="0.2171875" />
         <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/menu/menu_option_main.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/menu/nav_menu.xml" value="0.4036458333333333" />
