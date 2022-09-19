@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.damoim.CreateActivity
+import com.example.damoim.MoimDetailActivity
 import com.example.damoim.Post
 
 import com.example.damoim.R
@@ -238,15 +239,15 @@ class BottomTab1MeetFragment : BaseFragment() {
             // 배경색깔
 //            holder.containerView.setBackgroundColor(post.)
 
-            // 카드가 클릭되는 경우 DetailActivity 를 실행한다.
-//            holder.itemView.setOnClickListener {
-//                // 상세화면을 호출할 Intent 를 생성한다.
-//                val intent = Intent(this@MainActivity, DetailActivity::class.java)
-//                // 선택된 카드의 ID 정보를 intent 에 추가한다.
-//                intent.putExtra("postId", post.postId)
-//                // intent 로 상세화면을 시작한다.
-//                startActivity(intent)
-//            }
+//             카드가 클릭되는 경우 DetailActivity 를 실행한다.
+            holder.itemView.setOnClickListener {
+                // 상세화면을 호출할 Intent 를 생성한다.
+                val intent = Intent(context, MoimDetailActivity::class.java)
+                // 선택된 카드의 ID 정보를 intent 에 추가한다.
+                intent.putExtra("postId", post.postId)
+                // intent 로 상세화면을 시작한다.
+                startActivity(intent)
+            }
         }
     }
 

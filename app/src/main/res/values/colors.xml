@@ -9,4 +9,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FB5762</color>
     <color name="red2">#FFF7313E</color>
+    <color name="pastel_1">#8DA0FB</color>
+    <color name="pastel_2">#79B9F8</color>
+    <color name="pastel_3">#8CF1E0</color>
+    <color name="pastel_4">#FAB08D</color>
+    <color name="pastel_5">#FB8993</color>
+    <color name="pastel_6">#CEB4FB</color>
+
 </resources>

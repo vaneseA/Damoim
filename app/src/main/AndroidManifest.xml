@@ -17,7 +17,7 @@
         android:theme="@style/Theme.Damoim"
         tools:targetApi="31">
         <activity
-            android:name=".MoimdetailActivity"
+            android:name=".MoimDetailActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
