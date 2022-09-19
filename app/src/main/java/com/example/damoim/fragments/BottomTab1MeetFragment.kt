@@ -199,7 +199,7 @@ class BottomTab1MeetFragment : BaseFragment() {
         // 모임 목적
         val tv_purpose_of_meet_meet_basic_recycler_item: TextView =
             itemView.tv_purpose_of_meet_meet_basic_recycler_item
-//
+        //
         // 모임 이미지
         val circle_image_view_meet_basic_recycler_item: ImageView =
             itemView.circle_image_view_meet_basic_recycler_item

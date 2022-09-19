@@ -31,14 +31,15 @@ class SignupActivity : AppCompatActivity() {
         }
 
     }
-var seletedPhotoUri: Uri? = null
+
+    var seletedPhotoUri: Uri? = null
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 0 && resultCode == Activity.RESULT_OK && data != null) {
 
             seletedPhotoUri = data.data
 
-            val bitmap = MediaStore.Images.Media.getBitmap(contentResolver,seletedPhotoUri)
+            val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, seletedPhotoUri)
             val bitmapDrawable = BitmapDrawable(bitmap)
             profileImg.setBackgroundDrawable(bitmapDrawable)
         }
@@ -92,15 +93,20 @@ var seletedPhotoUri: Uri? = null
 
     private fun saveUserToFirebaseDatabase(profileImageUrl: String) {
         val uid = FirebaseAuth.getInstance().uid ?: ""
-        val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
+//        val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
+        // Firebase 의 Posts 참조에서 객체를 저장하기 위한 새로운 카를 생성하고 참조를 newRef 에 저장
+        val newRef = FirebaseDatabase.getInstance().getReference("users").push()
 
-        val user = User(uid,nickEdt.text.toString(),profileImageUrl)
+        val gender = if (rbAccountMale.isChecked) "남자" else "여자"
 
-        ref.setValue(user)
-            .addOnSuccessListener {
-                Log.d("SignupActivity","firebase Database에 저장되었습니다.")
-            }
+
+            val userData = UserData(uid, nickEdt.text.toString(), profileImageUrl, gender)
+
+            newRef.setValue(userData)
+                .addOnSuccessListener {
+                    Log.d("SignupActivity", "firebase Database에 저장되었습니다.")
+                    Toast.makeText(this, "회원가입 완료", Toast.LENGTH_SHORT).show()
+                }
+        }
     }
-}
 
-class User(val uid: String, val username: String, val profileImageUrl:String)

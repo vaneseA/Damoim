@@ -1,7 +1,8 @@
 package com.example.damoim
 
 class UserData (
-    val moimImg : String,
-        ){
+val uid: String,
+val username: String,
+val profileImageUrl:String,
+val gender: String)
 
-}

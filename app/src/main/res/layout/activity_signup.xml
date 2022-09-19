@@ -73,16 +73,6 @@
                     android:inputType="textEmailAddress"
                     android:padding="8dp" />
 
-                <Button
-                    android:id="@+id/emailDupBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:backgroundTint="@color/red"
-                    android:fontFamily="@font/jalnanche"
-                    android:text="중복 확인"
-                    android:textColor="@color/white" />
-
             </LinearLayout>
 
 
@@ -93,17 +83,6 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/bg_edit_text_basic"
                 android:hint="비밀번호 8자 이상"
-                android:inputType="textPassword"
-                android:padding="8dp" />
-
-
-            <EditText
-                android:id="@+id/pwDupEdt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/bg_edit_text_basic"
-                android:hint="비밀번호 재입력"
                 android:inputType="textPassword"
                 android:padding="8dp" />
 
@@ -126,16 +105,6 @@
                     android:inputType="text"
                     android:padding="8dp" />
 
-                <Button
-                    android:id="@+id/nickDupBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:backgroundTint="@color/red"
-                    android:fontFamily="@font/jalnanche"
-                    android:text="중복 확인"
-                    android:textColor="@color/white" />
-
             </LinearLayout>
 
             <TextView
@@ -144,13 +113,13 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/jalnanche"
-                android:text="선택 입력 사랑"
+                android:text="프로필 이미지"
                 android:textSize="17dp" />
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profileImg"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:background="@mipmap/ic_launcher_round"
+                android:background="@drawable/bg_image_search"
                 android:layout_gravity="center"/>
 
             <RadioGroup
