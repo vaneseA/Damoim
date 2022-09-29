@@ -57,7 +57,7 @@ class CreateActivity : AppCompatActivity() {
         val formatter = SimpleDateFormat("yyyy_MM_dd_HH_mm_ss", Locale.getDefault())
         val now = Date()
         val fileName = formatter.format(now)
-        val ref = FirebaseStorage.getInstance().getReference("images/$fileName")
+        val ref = FirebaseStorage.getInstance().getReference("moimimages/$fileName")
 
         ref.putFile(selectedPhotoUri!!).addOnSuccessListener {
             moimImg.setImageURI(null)

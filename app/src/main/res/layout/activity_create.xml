@@ -19,15 +19,14 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:theme="@style/ToolbarTheme_Red">
+            android:layout_height="?attr/actionBarSize">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/jalnanche"
                 android:text="모임 개설"
-                android:textColor="@color/red"
+                android:textColor="@color/maincolor"
                 android:textSize="16sp" />
         </androidx.appcompat.widget.Toolbar>
 
@@ -132,7 +131,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:textColor="@color/white"
-            android:background="@color/red"
+            android:background="@color/maincolor"
             android:fontFamily="@font/jalnanche"
             android:text="모임 만들기" />
 
